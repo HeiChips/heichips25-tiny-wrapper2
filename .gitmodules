@@ -1,0 +1,6 @@
+[submodule "submodules/heiChips2025_sap3_and_sorter"]
+	path = submodules/heiChips2025_sap3_and_sorter
+	url = ../../HeiChips/heiChips2025_sap3_and_sorter.git
+[submodule "submodules/heichips25-fsm"]
+	path = submodules/heichips25-fsm
+	url = ../../HeiChips/heichips25-fsm.git

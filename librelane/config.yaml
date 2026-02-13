@@ -1,7 +1,24 @@
 # LibreLane configuration file
 
-DESIGN_NAME: heichips25_template
-VERILOG_FILES: dir::../src/heichips25_template.sv
+DESIGN_NAME: heichips25_tiny_wrapper2
+VERILOG_FILES:
+ - dir::../src/heichips25_tiny_wrapper2.sv
+  # FSM
+ - dir::../submodules/heichips25-fsm/src/Controller.v
+ - dir::../submodules/heichips25-fsm/src/heichips25_can_lehmann_fsm.sv
+ - dir::../submodules/heichips25-fsm/src/InstMem.v
+  # SAP3
+ - dir::../submodules/heiChips2025_sap3_and_sorter/heichips25_sap-3/src/heichips25_sap3.sv
+ - dir::../submodules/heiChips2025_sap3_and_sorter/heichips25_sap-3/src/alu.v
+ - dir::../submodules/heiChips2025_sap3_and_sorter/heichips25_sap-3/src/array_serializer.sv
+ - dir::../submodules/heiChips2025_sap3_and_sorter/heichips25_sap-3/src/clk_div_param.sv
+ - dir::../submodules/heiChips2025_sap3_and_sorter/heichips25_sap-3/src/clock.v
+ - dir::../submodules/heiChips2025_sap3_and_sorter/heichips25_sap-3/src/controller.v
+ - dir::../submodules/heiChips2025_sap3_and_sorter/heichips25_sap-3/src/ir.v
+ - dir::../submodules/heiChips2025_sap3_and_sorter/heichips25_sap-3/src/reg_file.v
+ - dir::../submodules/heiChips2025_sap3_and_sorter/heichips25_sap-3/src/serializer.sv
+ - dir::../submodules/heiChips2025_sap3_and_sorter/heichips25_sap-3/src/top.v
+
 CLOCK_PORT: clk
 CLOCK_PERIOD: 10 # 10ns = 100MHz
 
@@ -28,3 +45,5 @@ RT_MAX_LAYER: TopMetal1
 
 # Enable for better SystemVerilog support
 #USE_SLANG: true
+
+FALLBACK_SDC_FILE: dir::../custom.sdc
